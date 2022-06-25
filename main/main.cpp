@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "asio.hpp"
+#include <stdio.h>
 #include <nvs_flash.h>
 #include <esp_wifi.h>
 #include <esp_log.h>
@@ -57,22 +57,22 @@ extern "C" void wifi_csi_rx_cb(void *ctx, wifi_csi_info_t *info)
     }
 
     ets_printf("]\"\n");
-    // asio_send_msg(NULL);
+    asio_send_msg(NULL);
 }
 
 extern "C" void wifi_init()
 {
     // 创建LwIP核心任务并初始化与LwIP相关的工作。
-    esp_netif_init();
+    ESP_ERROR_CHECK(esp_netif_init());
     // // 创建系统事件任务并初始化应用程序事件的回调函数。
-    esp_event_loop_create_default();
+    ESP_ERROR_CHECK(esp_event_loop_create_default());
     // 创建具有TCP / IP堆栈的默认网络接口实例绑定基站
-    esp_netif_create_default_wifi_sta();
+    (esp_netif_create_default_wifi_sta());
 
     wifi_init_config_t config = WIFI_INIT_CONFIG_DEFAULT();
-    esp_wifi_init(&config);
+    ESP_ERROR_CHECK(esp_wifi_init(&config));
 
-    esp_wifi_set_mode(WIFI_MODE_STA);
+    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
     // esp_wifi_set_storage(WIFI_STORAGE_RAM);
     // esp_wifi_set_bandwidth(WIFI_IF_STA, WIFI_BW_HT40);
     // uint8_t a = 11;
@@ -81,10 +81,10 @@ extern "C" void wifi_init()
     wifi_config_t wifi_config = {};
     strcpy((char *)wifi_config.sta.ssid, "pan(1)");
     strcpy((char *)wifi_config.sta.password, "panning2011");
-    esp_wifi_set_config(WIFI_IF_STA, &wifi_config);
+    ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config));
 
-    esp_wifi_start();
-    esp_wifi_connect();
+    ESP_ERROR_CHECK(esp_wifi_start());
+    ESP_ERROR_CHECK(esp_wifi_connect());
 }
 
 // 开启csi  不要忘记在设置里打开
