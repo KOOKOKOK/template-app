@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+E:/Cpro/wifi_ping_csi/template-app/build/CMakeFiles/bootloader
+E:/Cpro/wifi_ping_csi/template-app/build/CMakeFiles/bootloader.rule
+E:/Cpro/wifi_ping_csi/template-app/build/CMakeFiles/bootloader-complete.rule
+E:/Cpro/wifi_ping_csi/template-app/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+E:/Cpro/wifi_ping_csi/template-app/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+E:/Cpro/wifi_ping_csi/template-app/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+E:/Cpro/wifi_ping_csi/template-app/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+E:/Cpro/wifi_ping_csi/template-app/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+E:/Cpro/wifi_ping_csi/template-app/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+E:/Cpro/wifi_ping_csi/template-app/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
