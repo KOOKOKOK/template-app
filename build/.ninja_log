@@ -2027,3 +2027,4 @@
 10927	15165	6779324059729450	template-app.elf	b9f8d523192e2318
 15166	15400	6779324062281168	.bin_timestamp	3c093696f6cfa0ac
 15401	15464	0	esp-idf/esptool_py/CMakeFiles/app_check_size	7849c9a8576c78c9
+0	3525726	0	CMakeFiles/confserver	bbd484c0f0cee7fe
