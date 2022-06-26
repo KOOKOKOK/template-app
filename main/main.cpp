@@ -278,7 +278,6 @@ extern "C" void app_main(void)
     wifi_init();
     csi_init();
     ////等待WIFI freertos 中task创建完成 给1秒时间 不然一开始ping不到
-    // vTaskDelay(pdMS_TO_TICKS(1000));
     ping_work_start();
     // xTaskCreate(asio_send_msg, "udp_send", 2048, NULL, 1, NULL);
 }
